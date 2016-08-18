@@ -6,7 +6,7 @@
 - Backend - PHP
 
 ## Nesto o aplikaciji
-Ova aplikacija koristi korisnicima koji žele na lak ii brz način da naruče deo za svoj automobil. Pored samo korisnika postoji i sam admin, koji može da doda proizvod, obriše, dobija uvid u naručene delove itd.
+Ova aplikacija koristi korisnicima koji žele na lak ii brz način da naruče deo za svoj automobil. Pored samo korisnika postoji i sam admin, koji može da doda proizvod, obriše proizvod, dobija uvid u naručene delove itd.
 
 ## Potrebno je imati
 ### Node.js
