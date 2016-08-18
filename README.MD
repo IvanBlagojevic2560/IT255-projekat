@@ -20,7 +20,7 @@ Potrebno je importovati vebprojekat.sql fajl u bazu.
 
 ```
 - Otvorite Command Prompt
-- Udjete u direktorijum gde se nalazi projekat, zbog php-a bi trebalo da se stavi u folder phpProjekat da bi sve funkcionisalo kako treba
+- Udjete u direktorijum gde se nalazi projekat, folder phpProjekat smestite u htdocs (folder u xampp-u) i zatim prokenite projekat.
 - Pokrenete npm install
 - npm run tsc:w
 - Pokrenete npm start
