@@ -489,11 +489,3 @@ Dodavanje vozila:
       );
   }
 ```
-  
-## Kontakt
-luka.kotur.2399@metropolitan.ac.rs
-dejan.zivlak.2526@metropolitan.ac.rs
-
-
-[node-download]: https://nodejs.org/en/download/
-[Angular2]: https://angular.io/
