@@ -1,0 +1,36 @@
+
+<style>
+
+
+h1 {
+font-family: 'Passion One', cursive;
+font-weight: 400;
+}
+</style>
+
+<h1> Ostavite svoj komentar: </h1>
+
+<form role="form" [ngFormModel]="komentarForm">
+
+<KomentariPage> </KomentariPage>
+
+ <div class="form-group">
+
+    <label for="komentar">Komentar:</label>
+    <input type="text" class="form-control" ngControl='komentar'>
+  </div>
+
+
+  <div class="form-group">
+
+     <label for="username">Vaš username:</label>
+     <input type="text" class="form-control" ngControl='username' disabled>
+   </div>
+
+
+
+  <button (click)="onAddComment()" class="btn btn-primary">Dodaj</button>
+<br/><br/>
+
+
+</form>

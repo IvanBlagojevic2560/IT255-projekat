@@ -1,0 +1,37 @@
+<div class="col-lg-12">
+	<table  class="display" cellspacing="0" >
+	    <thead>
+            <tr>
+
+                <th>Username: </th>
+                <th>Deo: </th>
+				      <th>Model: </th>
+				<th>Opis: </th>
+                <th>Cena: </th>
+					<th>Obriši: </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="#ko of korpa">
+
+                <td>{{ko.username}}</td>
+                <td>{{ko.NAZIV}}</td>
+				<td>{{ko.model}}</td>
+				<td>{{ko.opis}}</td>
+        <td>{{ko.cena}}</td>
+
+				 <td>
+                  <button class="btn btn-danger" title="remove" (click)="remove(ko.id)">
+
+
+
+                      <span class="glyphicon glyphicon-remove"></span>
+
+                   </button>
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>

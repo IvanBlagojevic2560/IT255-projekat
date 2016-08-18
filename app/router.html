@@ -1,0 +1,49 @@
+
+
+ <nav class="navbar navbar-inverse">
+ <div class="container-fluid">
+ <div class="navbar-header">
+ <button type="button" class="navbar-toggle" data-toggle="collapse" datatarget="#myNavbar">
+
+ <span class="icon-bar"></span>
+ <span class="icon-bar"></span>
+ <span class="icon-bar"></span>
+ </button>
+ <a class="navbar-brand" [routerLink]="['MainPage']">Auto-delovi</a>
+
+ </div>
+
+ <div class="collapse navbar-collapse" id="myNavbar">
+ <ul class="nav navbar-nav">
+
+	 <li><a [routerLink]="['MainPage']">Početna</a></li>
+	<li><a [routerLink]="['ONama']">O nama</a></li>
+
+
+   <li  *ngIf="isAuth2 == 'yes' || isAuth== 'yes' " [class.active]="router.isRouteActive(router.generate(['/ForumPage']))"><a [routerLink]="['ForumPage']">Forum</a></li>
+
+   <li *ngIf="isAuth2 == 'yes' && isAuth== 'no' " [class.active]="router.isRouteActive(router.generate(['/TestPage']))"><a [routerLink]="['TestPage']">Spisak korisnika</a></li>
+  <li *ngIf="isAuth2 == 'yes' && isAuth== 'no' " [class.active]="router.isRouteActive(router.generate(['/FormPage4']))"><a [routerLink]="['FormPage4']">Dodaj proizvod</a></li>
+<li *ngIf="isAuth2 == 'yes' && isAuth== 'no' " [class.active]="router.isRouteActive(router.generate(['/NarudzbinePage']))"><a [routerLink]="['NarudzbinePage']">Spisak narudžbina</a></li>
+
+
+ <li  *ngIf="isAuth == 'yes' ||  isAuth2== 'yes' " [class.active]="router.isRouteActive(router.generate(['/ProizvodiPage']))"><a [routerLink]="['ProizvodiPage']">Proizvodi</a></li>
+
+
+ </ul>
+
+ <ul class="nav navbar-nav navbar-right" id="desno">
+
+
+<li *ngIf="isAuth2 == 'no' && isAuth=='no'" [class.active]="router.isRouteActive(router.generate(['/RegisterPage']))"><a [routerLink]="['RegisterPage']"><span class="glyphicon glyphicon-user"></span>
+ SignUp </a></li>
+ <li *ngIf="isAuth2 == 'no' && isAuth=='no' " [class.active]="router.isRouteActive(router.generate(['/LoginPage']))"><a [routerLink]="['LoginPage']"><span class="glyphicon glyphicon-log-in"></span>
+  LogIn </a></li>
+<li *ngIf="isAuth2 == 'yes' || isAuth == 'yes'" [class.active]="router.isRouteActive(router.generate(['/RegisterPage']))"><a (click)="onLogout()"><span class="glyphicon glyphicon-log-out"></span>LogOut</a></li>
+</ul>
+ </div>
+ </div>
+</nav>
+<div class="container">
+<router-outlet></router-outlet>
+</div>
